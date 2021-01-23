@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(34,193,195);
+    background: linear-gradient(311deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+
+.Calculadora {
+    display: grid;
+    grid-template-areas:"resultado resultado resultado resultado"
+                        "reset division multiplicacion resta"
+                        "siete ocho nueve suma"
+                        "cuatro cinco seis suma"
+                        "uno dos tres igual"
+                        "cero cero punto igual";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap:10px;
+    height: 100vh;
+    border: 2px solid white;
+    padding: 50px;
+    min-width: 300px;
+    width: 800px;
+}
+
+.container, .resultado-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 2rem;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado-container {
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.item {
+    border: 1px solid white;
+    border-radius: 5px;
+    color:white;
+}
+
+.item:hover{
+    background-color: white;
+    opacity: 0.5;
+    cursor: pointer;
+    color: black ;
+}
+
+
+.resultado {
+    grid-area: resultado;
+    background-color: black;
+    color:white;
+    opacity: 0.9;
+    margin-bottom:5px;
+}
+.reset { grid-area: reset}
+.division { grid-area: division}
+.multiplicacion { grid-area: multiplicacion}
+.resta { grid-area: resta}
+.siete { grid-area: siete}
+.ocho { grid-area: ocho}
+.nueve { grid-area: nueve}
+.suma { grid-area: suma}
+.cuatro { grid-area: cuatro}
+.cinco { grid-area: cinco}
+.seis { grid-area: seis}
+.uno { grid-area: uno}
+.dos { grid-area: dos}
+.tres { grid-area: tres}
+.cero { grid-area: cero}
+.punto { grid-area: punto}
+.igual { grid-area: igual}
